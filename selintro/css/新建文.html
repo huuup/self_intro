@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+		setInterval(
+		function(){
+				document.getElementById("bg").style.background="black";
+				var i = 255;
+		t =	setInterval(
+				function(){
+				var s = "#";
+				var a = i / 16;
+				var b = i % 16;
+				if(a < 10)
+				a = a + 48;
+				else
+				a = a + 55;
+				if(b < 10)
+				b = b + 48;
+				else
+				b = b + 55;
+				var c = String.fromCharCode(a);
+				var d = String.fromCharCode(b);
+				s = s + c + d + c+d + c + d;
+				document.getElementById("bg").style.background=s;
+				i--;
+				if(i==0)
+					clearInterval(t);
+				},3)
+				
+		},5000);
+				</script>
+				</head>
+				<body style="background-color:black" id = "bg">
+				</body>
+</html>
